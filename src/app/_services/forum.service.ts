@@ -19,4 +19,22 @@ export class ForumService {
   public find(id: string): Observable<QuestionDetailsDTO> {
     return this.http.get<QuestionDetailsDTO>(`${this.endpoint}/question/${id}`);
   }
+
+  public voteDown(questionId: string, userId: number) {
+    return this.http.put<QuestionDetailsDTO>(`${this.endpoint}/question/down`, 
+    {
+      questionId: questionId,
+      userId: userId,
+    }
+    );
+  }
+
+  public voteUp(questionId: string, userId: number) {
+    return this.http.put<QuestionDetailsDTO>(`${this.endpoint}/question/up`, 
+    {
+      questionId: questionId,
+      userId: userId,
+    }
+    );
+  }
 }

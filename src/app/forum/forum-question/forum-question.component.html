@@ -9,9 +9,9 @@
 
             <div id="voting">
                 <span>{{questionDetails.votesUp}}</span>
-                <button><fa-icon [icon]="arrowUp"></fa-icon></button>
+                <button (click)="voteUp()"><fa-icon [icon]="arrowUp"></fa-icon></button>
                 <span>{{questionDetails.votesDown}}</span>
-                <button><fa-icon [icon]="arrowDown"></fa-icon></button>
+                <button (click)="voteDown()"><fa-icon [icon]="arrowDown"></fa-icon></button>
             </div>
             <div class="card user-detail">
                 <span>By: {{questionDetails.username}}</span><br>
