@@ -13,6 +13,10 @@ import { HomeComponent } from './home/home.component';
 import { HeaderNavComponent } from './header/header-nav/header-nav.component';
 import { ForumMainComponent } from './forum/forum-main/forum-main.component';
 import { ProfileComponent } from './profile/profile.component';
+import { ForumQuestionComponent } from './forum/forum-question/forum-question.component';
+import { HotQuestionsComponent } from './forum/hot-questions/hot-questions.component';
+import { ForumSideBarComponent } from './forum/forum-side-bar/forum-side-bar.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -23,12 +27,16 @@ import { ProfileComponent } from './profile/profile.component';
     HeaderNavComponent,
     ForumMainComponent,
     ProfileComponent,
+    ForumQuestionComponent,
+    HotQuestionsComponent,
+    ForumSideBarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

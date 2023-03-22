@@ -1,4 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
 body {
     height: 100vh;
+    font-family: 'Rubik', sans-serif;
 }
+
+thead {
+    background-color: antiquewhite;
+}
+
+tr {
+    background-color: white;
+}
+
+td {
+    padding: 3px 6px;
+}
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+input {
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.card { 
+    padding: 10px 20px;
+    background-color: white;
+    border: 1px solid;
+    border-radius: 8px;
+}
+

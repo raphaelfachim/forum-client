@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { LoginService } from '../_services/login.service';
 import { HeaderNav } from '../_types';
 
 @Component({
@@ -6,7 +7,9 @@ import { HeaderNav } from '../_types';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
+
+  public username: string = '';
 
   public navigationList: HeaderNav[] = [
     {
@@ -18,4 +21,11 @@ export class HeaderComponent {
       path: '/forum'
     }
   ]
+
+  constructor(private readonly loginService: LoginService) {
+
+  }
+  ngOnInit(): void {
+    this.username = this.loginService.user.user;
+  }
 }

@@ -1,6 +1,11 @@
 <div id="main">
-    <div id="user-info">
-        <span id="username">username</span>
+    <div id="header-top">
+        <div>
+            <img src="../assets/img/logo.jpg" alt="mush-logo" width="75" height="75">
+        </div>
+        <div id="user-info">
+            <span id="username"><a routerLink="profile">{{username}}</a></span>
+        </div>
     </div>
     <div id="navigation">
         <div *ngFor="let nav of navigationList">

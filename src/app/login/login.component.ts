@@ -26,8 +26,6 @@ export class LoginComponent {
       password: this.loginForm.value.password,
     };
 
-    this.loginService.login(loginDto).subscribe((res) => {
-      this.user = res;
-    });
+    this.loginService.login(loginDto);
   }
 }

@@ -1,0 +1,25 @@
+<div id="main">
+    <div id="side">
+        <app-forum-side-bar></app-forum-side-bar>
+    </div>
+    <div id="general">
+        <div class="card question" *ngIf="questionDetails">
+            <h2>{{questionDetails.title}}</h2>
+            <span>{{questionDetails.content}}</span>
+
+            <div id="voting">
+                <span>{{questionDetails.votesUp}}</span>
+                <button><fa-icon [icon]="arrowUp"></fa-icon></button>
+                <span>{{questionDetails.votesDown}}</span>
+                <button><fa-icon [icon]="arrowDown"></fa-icon></button>
+            </div>
+            <div class="card user-detail">
+                <span>By: {{questionDetails.username}}</span><br>
+                <span>At: {{questionDetails.createdAt}}</span><br>
+            </div>
+        </div>
+    </div>
+    <div id="hot">
+        <app-hot-questions></app-hot-questions>
+    </div>
+</div>

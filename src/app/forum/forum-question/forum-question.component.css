@@ -1,0 +1,25 @@
+#main {
+    display: grid;
+    grid-template-columns: 10% 70% 20%;
+}
+
+#general {
+    display: flex;
+    justify-content: center;
+}
+
+#voting {
+    display: flex;
+    justify-content: end;
+    gap: 5px;
+}
+
+.question {
+    width: 85%;
+    margin-top: 20px;
+}
+
+.user-detail {
+    margin-top: 10px;
+    font-size: small;
+}

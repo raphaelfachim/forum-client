@@ -1,4 +1,7 @@
 <div id="main">
+    <div id="side">
+        <app-forum-side-bar></app-forum-side-bar>
+    </div>
     <div id="general">
         <table>
             <thead>
@@ -8,7 +11,16 @@
                 <td>Up Votes</td>
                 <td>Down Votes</td>
             </thead>
+            <tr *ngFor="let question of questions">
+                <td><a (click)="goToQuestion(question.id)">{{question.title}}</a></td>
+                <td>{{question.username}}</td>
+                <td>{{question.createdAt}}</td>
+                <td>{{question.votesUp}}</td>
+                <td>{{question.votesDown}}</td>
+            </tr>
         </table>
     </div>
-    <div id="hot"></div>
+    <div id="hot">
+        <app-hot-questions></app-hot-questions>
+    </div>
 </div>

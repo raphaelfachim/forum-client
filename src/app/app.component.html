@@ -1,14 +1,8 @@
 <div id="app">
-    <div *ngIf="!userLogged">
-        <app-login></app-login>
+    <div id="header" *ngIf="userLogged">
+        <app-header></app-header>
     </div>
-
-    <div id="main" *ngIf="userLogged">
-        <div id="header">
-            <app-header></app-header>
-        </div>
-        <div id="body">
-            <router-outlet></router-outlet>
-        </div>
+    <div id="body">
+        <router-outlet></router-outlet>
     </div>
 </div>
