@@ -1,0 +1,17 @@
+thead {
+    background-color: antiquewhite;
+}
+
+td {
+    padding: 3px 6px;
+}
+
+#main {
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+
+#general {
+    display: flex;
+    justify-content: center;
+}

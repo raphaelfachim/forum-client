@@ -1,0 +1,11 @@
+button {
+    padding: 7px 8px;
+    height: 100%;
+    border: none;
+    border-right: 1px solid;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: aquamarine;
+}

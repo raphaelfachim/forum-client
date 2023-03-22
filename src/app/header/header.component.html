@@ -1,0 +1,10 @@
+<div id="main">
+    <div id="user-info">
+        <span id="username">username</span>
+    </div>
+    <div id="navigation">
+        <div *ngFor="let nav of navigationList">
+            <app-header-nav [info]="nav"></app-header-nav>
+        </div>
+    </div>
+</div>

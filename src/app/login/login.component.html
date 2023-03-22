@@ -1,0 +1,24 @@
+<div>
+    <div class="card">
+        <div class="login">
+            <div id="logo">
+                <img src="../assets/img/logo.jpg" width="150" height="150"><br>
+            </div>
+            <span>Login</span><br>
+            <form [formGroup]="loginForm" (ngSubmit)="submitLogin()">
+                <div class="form-field">
+                    <label for="email">Email</label><br>
+                    <input type="text" id="email" placeholder="email" formControlName="username"><br>
+                </div>
+                <div class="form-field">
+                    <label for="password">Password</label><br>
+                    <input type="password" id="password" placeholder="password" formControlName="password"><br>
+                </div>
+                
+                <button type="submit">Login</button>
+            </form>
+
+        </div>
+    </div>
+    <div *ngIf="user">{{user}}</div>
+</div>

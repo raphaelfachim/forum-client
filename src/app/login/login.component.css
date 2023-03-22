@@ -1,0 +1,19 @@
+.card {
+    display: flex;
+    justify-content: center;
+}
+
+.login {
+    padding: 30px;
+    background-color: rgba(113,166,160,255);
+    border-radius: 12px;
+}
+
+.form-field {
+    padding: 5px 0;
+}
+
+#logo {
+    display: flex;
+    justify-content: center;
+}

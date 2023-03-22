@@ -1,0 +1,19 @@
+
+#main {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 30% 70%;
+}
+
+#username {
+    margin-right: 20px;
+}
+
+#user-info {
+    display: flex;
+    justify-content: end;
+}
+
+#navigation {
+    display: flex;
+}
