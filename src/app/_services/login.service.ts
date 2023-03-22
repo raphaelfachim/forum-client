@@ -25,12 +25,24 @@ export class LoginService {
     this.http.post<User>(this.endpoint, loginDto).subscribe((res) => {
       this.isAuthenticated = true;
       this.user = res;
+      this.updateLocalStorage();
       this.authEmitter.emit(true);
       this.router.navigate(['']);
     });
   }
 
   public isAutheticated(): boolean {
-    return this.isAuthenticated;
+    return this.isAuthenticated || localStorage.getItem('user').length > 0;
+  }
+  
+  private updateLocalStorage(): void {
+    localStorage.setItem('user', this.user.user);
+    localStorage.setItem('active', this.user.active ? 'true' : 'false');
+  }
+
+  public logout(): void {
+    this.isAuthenticated = false;
+    localStorage.clear();
+    this.authEmitter.emit(false);
   }
 }

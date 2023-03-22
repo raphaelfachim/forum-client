@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { LoginService } from '../_services/login.service';
 import { HeaderNav } from '../_types';
 
@@ -22,10 +23,16 @@ export class HeaderComponent implements OnInit {
     }
   ]
 
-  constructor(private readonly loginService: LoginService) {
-
-  }
+  constructor(
+    private readonly loginService: LoginService,
+    private readonly router: Router
+    ) { }
   ngOnInit(): void {
     this.username = this.loginService.user.user;
+  }
+
+  public logout(): void {
+    this.loginService.logout();
+    this.router.navigate(['login']);
   }
 }
