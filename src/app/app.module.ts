@@ -17,6 +17,7 @@ import { ForumQuestionComponent } from './forum/forum-question/forum-question.co
 import { HotQuestionsComponent } from './forum/hot-questions/hot-questions.component';
 import { ForumSideBarComponent } from './forum/forum-side-bar/forum-side-bar.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NewQuestionComponent } from './forum/new-question/new-question.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ForumQuestionComponent,
     HotQuestionsComponent,
     ForumSideBarComponent,
+    NewQuestionComponent,
   ],
   imports: [
     BrowserModule,

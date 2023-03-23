@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ForumMainComponent } from './forum/forum-main/forum-main.component';
 import { ForumQuestionComponent } from './forum/forum-question/forum-question.component';
+import { NewQuestionComponent } from './forum/new-question/new-question.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'forum', component: ForumMainComponent, canActivate: [AuthGuard] },
   { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
   { path: 'question', component: ForumQuestionComponent, canActivate: [AuthGuard] },
+  { path: 'new-question', component: NewQuestionComponent, canActivate: [AuthGuard] },
 ];
 
 @NgModule({

@@ -1,0 +1,23 @@
+<div id="main">
+    <div id="side">
+        <app-forum-side-bar></app-forum-side-bar>
+    </div>
+    <div id="general">
+        <form [formGroup]="questionForm">
+            <div class="">
+                <label for="title">Title</label><br>
+                <input type="text" id="title" formControlName="title"><br>
+            </div>
+            <div class="">
+                <label for="content">Content</label><br>
+                <input type="text" id="content" class="big-input" formControlName="content"><br>
+            </div>
+            <div id="send-button">
+                <button type="submit" (click)="create()"><fa-icon [icon]="sendIcon"></fa-icon></button>
+            </div>
+        </form>
+    </div>
+    <div id="hot">
+        <app-hot-questions></app-hot-questions>
+    </div>
+</div>

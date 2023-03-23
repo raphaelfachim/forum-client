@@ -16,3 +16,11 @@
     height: 100%;
     background-color: rgb(35, 90, 72);
 }
+
+.form-field {
+    padding: 5px 0;
+}
+
+.big-input {
+    height: 200px;
+}

@@ -18,7 +18,7 @@ export class LoginComponent {
 
   public user: User;
 
-  constructor(private loginService: LoginService) { }
+  constructor(private readonly loginService: LoginService) { }
 
   public submitLogin(): void {
     let loginDto: LoginDTO = {

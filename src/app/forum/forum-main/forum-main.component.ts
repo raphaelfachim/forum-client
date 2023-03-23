@@ -24,6 +24,6 @@ export class ForumMainComponent implements OnInit{
   }
 
   public goToQuestion(questionId: string): void {
-    this.router.navigate(['question', {id: questionId}])
+    this.router.navigate(['question', {id: questionId}]);
   }
 }
