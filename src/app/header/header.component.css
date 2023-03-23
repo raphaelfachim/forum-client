@@ -20,6 +20,10 @@
     justify-content: end;
 }
 
+#user-content {
+    height: 20px;
+}
+
 #navigation {
     display: flex;
 }

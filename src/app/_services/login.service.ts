@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
-import { EventEmitter, Injectable } from '@angular/core';
+import { EventEmitter, Injectable, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
 import { LoginDTO } from '../_dto';
 import { User } from '../_types';
 
@@ -32,17 +31,32 @@ export class LoginService {
   }
 
   public isAutheticated(): boolean {
-    return this.isAuthenticated || localStorage.getItem('user').length > 0;
+    if(this.isAuthenticated || (localStorage.length && localStorage.getItem('user').length > 0)){
+      this.user = this.getUserFromLocalStorage();
+      return true;
+    }
+    return false;
   }
   
   private updateLocalStorage(): void {
-    localStorage.setItem('user', this.user.user);
-    localStorage.setItem('active', this.user.active ? 'true' : 'false');
+    for(let key of Object.keys(this.user)){
+      localStorage.setItem(key, this.user[key]);
+    }
+    
   }
 
   public logout(): void {
     this.isAuthenticated = false;
     localStorage.clear();
     this.authEmitter.emit(false);
+  }
+
+  public getUserFromLocalStorage(): User {
+    return {
+      id: Number(localStorage.getItem('id')),
+      user: localStorage.getItem('user'),
+      email: localStorage.getItem('email'),
+      active: localStorage.getItem('active') === 'true' ? true : false
+    }
   }
 }

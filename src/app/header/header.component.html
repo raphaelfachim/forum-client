@@ -4,8 +4,10 @@
             <img src="../assets/img/logo.jpg" alt="mush-logo" width="75" height="75">
         </div>
         <div id="user-info">
-            <span id="username"><a routerLink="profile">{{username}}</a></span>
-            <button (click)="logout()"></button>
+            <div id="user-content">
+                <span id="username"><a routerLink="profile">{{username}}</a></span>
+                <button (click)="logout()"><fa-icon [icon]="logoutIcon"></fa-icon></button>
+            </div>
         </div>
     </div>
     <div id="navigation">
